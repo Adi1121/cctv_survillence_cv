@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart CCTV</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f2f2f2;
+        text-align: center;
+        margin: 50px;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      a {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #007bff;
+        border-radius: 5px;
+        font-size: 18px;
+      }
+
+      a:hover {
+        background-color: #0056b3;
+      }
+
+      .center-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .corner-icons {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Smart CCTV Camera</h1>
+
+    <div class="center-icons">
+      <a href="{{ url_for('in_out_route') }}">In Out</a>
+      <img
+        src="{{ url_for('static', filename='icons/incognito.png') }}"
+        alt="Incognito Icon"
+        width="50"
+      />
+    </div>
+
+    <br />
+
+    <div class="center-icons">
+      <a href="{{ url_for('noise_route') }}">Noise</a>
+      <img
+        src="{{ url_for('static', filename='icons/security-camera.png') }}"
+        alt="Security Camera Icon"
+        width="50"
+      />
+    </div>
+
+    <br />
+
+    <div class="center-icons">
+      <a href="{{ url_for('record_route') }}">Record</a>
+      <img
+        src="{{ url_for('static', filename='icons/rec.png') }}"
+        alt="Recording Icon"
+        width="50"
+      />
+    </div>
+
+    <br />
+
+    <div class="center-icons">
+      <a href="{{ url_for('rect_noise_route') }}">Rect Noise</a>
+      <img
+        src="{{ url_for('static', filename='icons/rectangle-of-cutted-line-geometrical-shape.png') }}"
+        alt="Rectangle Icon"
+        width="50"
+      />
+    </div>
+
+    <div class="corner-icons">
+      <img
+        src="{{ url_for('static', filename='icons/spy.png') }}"
+        alt="Spy Icon"
+        width="50"
+      />
+    </div>
+  </body>
+</html>
